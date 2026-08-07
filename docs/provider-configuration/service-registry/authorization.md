@@ -17,6 +17,8 @@ Authorization parameters help __protect upstream routes__ before traffic reaches
 
 __Authorize__ requires requests to provide a valid OAuth access token before they are forwarded.
 
+__Authorization type__ defines authorization protocol, either Basic Auth credentials, or OAuth bearer.
+
 __Required scopes__ restrict authorized traffic by HTTP method. Keys can be HTTP methods such as `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD`, `OPTIONS`, or `*` for the default rule. Values are the OAuth scopes required for the method.
 
 __Error content type__ defines the content type returned for gateway authorization errors.
