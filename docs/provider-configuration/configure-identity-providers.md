@@ -1,6 +1,6 @@
 # Identity providers configuration
 
-Identity providers are the server resources helping to __customize the end-user authentication interface__. Those means of authentication provide customizable flows and interfaces that help to keep the service branding while providing authentication for them in a seamless way. In case of misconfiguration in navigation error from the end-user, __fallbacks to [error templates](configuration/error-templates)__ are provided to keep a good end-user experience.
+Identity providers are the server resources helping to __customize the end-user authentication interface__. Those means of authentication provide customizable flows and interfaces that help to keep the service branding while providing authentication for them in a seamless way. In case of navigation error from the end-user, __fallbacks to [error templates](configuration/error-templates)__ are provided to keep a good end-user experience.
 
 ## Architecture
 
