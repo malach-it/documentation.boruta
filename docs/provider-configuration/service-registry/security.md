@@ -17,7 +17,9 @@ Security parameters help __protect upstream connections and traffic volume__. Th
 
 __Mutual TLS__ makes the gateway use mutual TLS when connecting to the upstream. This option requires the upstream scheme to be `https`.
 
-__Rate limiting__ applies request throttling before traffic is forwarded to the upstream.
+__Enable rate limiting__ applies request throttling before traffic is forwarded to the upstream.
+
+### Rate limiting
 
 __Request count__ defines how many requests are accepted during the selected time unit.
 
