@@ -216,6 +216,11 @@ const sidebars = {
           id: 'drafts/vc-decentralized-status',
           label: 'VC decentralized status'
         },
+        {
+          type: 'doc',
+          id: 'drafts/open-ecosystem',
+          label: 'Open ecosystem'
+        },
       ]
     },
     // {
