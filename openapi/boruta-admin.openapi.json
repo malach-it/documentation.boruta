@@ -8002,8 +8002,264 @@
         "title": "Token"
       },
       "LogStats": {
+        "title": "LogStats",
+        "description": "Log statistics. The response shape depends on the requested log type and on the events_only option for business logs.",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/RequestLogStats"
+          },
+          {
+            "$ref": "#/components/schemas/BusinessLogStats"
+          },
+          {
+            "$ref": "#/components/schemas/BusinessLogEvents"
+          }
+        ]
+      },
+      "RequestLogStats": {
+        "title": "RequestLogStats",
         "type": "object",
-        "additionalProperties": true
+        "additionalProperties": false,
+        "required": [
+          "time_scale_unit",
+          "overflow",
+          "log_lines",
+          "log_count",
+          "status_codes",
+          "request_counts",
+          "request_times",
+          "labels",
+          "methods"
+        ],
+        "properties": {
+          "time_scale_unit": {
+            "$ref": "#/components/schemas/LogTimeScaleUnit"
+          },
+          "overflow": {
+            "type": "boolean",
+            "description": "Whether more than 10,000 matching log lines were found and log_lines was truncated."
+          },
+          "log_lines": {
+            "type": "array",
+            "description": "Matching raw log lines, limited to the first 10,000 entries.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "log_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Total number of matching log lines, including lines omitted when overflow is true."
+          },
+          "status_codes": {
+            "type": "object",
+            "description": "Request counts grouped by request label and HTTP status code.",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LogIntegerSeries"
+            }
+          },
+          "request_counts": {
+            "type": "object",
+            "description": "Request counts grouped by request label and time bucket. Time-bucket keys use UTC timestamps.",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LogIntegerSeries"
+            }
+          },
+          "request_times": {
+            "type": "object",
+            "description": "Average request durations in milliseconds, grouped by request label and UTC time bucket.",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LogNumberSeries"
+            }
+          },
+          "labels": {
+            "type": "array",
+            "description": "Sorted request labels present in the matching logs.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "methods": {
+            "type": "array",
+            "description": "Sorted HTTP methods present in the matching logs.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "BusinessLogStats": {
+        "title": "BusinessLogStats",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "time_scale_unit",
+          "overflow",
+          "log_lines",
+          "log_count",
+          "counts",
+          "business_event_counts",
+          "gateway_times",
+          "domains",
+          "actions"
+        ],
+        "properties": {
+          "time_scale_unit": {
+            "$ref": "#/components/schemas/LogTimeScaleUnit"
+          },
+          "overflow": {
+            "type": "boolean",
+            "description": "Whether more than 10,000 matching log lines were found and log_lines was truncated."
+          },
+          "log_lines": {
+            "type": "array",
+            "description": "Matching raw log lines, limited to the first 10,000 entries.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "log_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Total number of matching log lines, including lines omitted when overflow is true."
+          },
+          "counts": {
+            "type": "object",
+            "description": "Business-event counts grouped by event label and status.",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LogIntegerSeries"
+            }
+          },
+          "business_event_counts": {
+            "type": "object",
+            "description": "Business-event counts grouped by event label and UTC time bucket.",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LogIntegerSeries"
+            }
+          },
+          "gateway_times": {
+            "type": "object",
+            "description": "Average request, gateway, and upstream durations in milliseconds, grouped by metric label and UTC time bucket.",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LogNumberSeries"
+            }
+          },
+          "domains": {
+            "type": "array",
+            "description": "Sorted business-event domains present in the matching logs.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "actions": {
+            "type": "array",
+            "description": "Sorted business-event actions present in the matching logs.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "BusinessLogEvents": {
+        "title": "BusinessLogEvents",
+        "description": "Reduced business-log response returned when events_only is true.",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "events",
+          "log_count",
+          "overflow"
+        ],
+        "properties": {
+          "events": {
+            "type": "array",
+            "description": "Parsed matching business events, limited to the first 10,000 entries.",
+            "items": {
+              "$ref": "#/components/schemas/BusinessLogEvent"
+            }
+          },
+          "log_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Total number of matching business events, including events omitted when overflow is true."
+          },
+          "overflow": {
+            "type": "boolean",
+            "description": "Whether more than 10,000 matching events were found and events was truncated."
+          }
+        }
+      },
+      "BusinessLogEvent": {
+        "title": "BusinessLogEvent",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "time",
+          "request_id",
+          "label",
+          "application",
+          "domain",
+          "action",
+          "status",
+          "attributes"
+        ],
+        "properties": {
+          "time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "request_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "application": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "LogTimeScaleUnit": {
+        "title": "LogTimeScaleUnit",
+        "type": "string",
+        "description": "Granularity selected for time-series buckets from the requested time range.",
+        "enum": [
+          "second",
+          "minute",
+          "hour"
+        ]
+      },
+      "LogIntegerSeries": {
+        "title": "LogIntegerSeries",
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "LogNumberSeries": {
+        "title": "LogNumberSeries",
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double",
+          "minimum": 0
+        }
       }
     },
     "securitySchemes": {
