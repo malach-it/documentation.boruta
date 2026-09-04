@@ -7285,6 +7285,21 @@
           "strip_uri": {
             "type": "boolean"
           },
+          "noise_cancelling_enabled": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enables request noise detection for this upstream. An OpenAPI specification must be supplied when enabling it without an existing trained model."
+          },
+          "noise_cancelling_configured": {
+            "type": "boolean",
+            "readOnly": true,
+            "description": "Indicates whether a trained noise-cancelling model is configured for this upstream."
+          },
+          "openapi_spec": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "An OpenAPI document in JSON or YAML format used to train the noise-cancelling model. The document is not persisted or returned."
+          },
           "uris": {
             "type": "array",
             "items": {
