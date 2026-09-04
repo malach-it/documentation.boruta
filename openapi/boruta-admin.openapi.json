@@ -20,19 +20,7 @@
         "summary": "List clients",
         "description": "<p>OAuth clients help web applications to get access to a resource server. Here configuration helps to manage them in order to use boruta for authentication and authorization. Beyond authorization, clients are the entrypoint for decentralized identity flows. The field descriptions are available in <a href=\"/docs/provider-configuration/configure-clients\">the main documentation pages</a>.</p><p><code>GET /api/clients</code> list all the clients available on the server</p><p><strong>Required scope:</strong> <code>clients:manage:all</code></p>",
         "operationId": "listclients",
-        "parameters": [
-          {
-            "name": "q",
-            "in": "query",
-            "description": "",
-            "required": false,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -1395,7 +1383,19 @@
         "summary": "list users",
         "description": "`GET /api/users` list users<p><strong>Required scope:</strong> <code>users:manage:all</code></p>",
         "operationId": "listusers",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "",
