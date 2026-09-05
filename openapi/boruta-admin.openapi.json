@@ -958,7 +958,7 @@
                 "type": "object",
                 "properties": {
                   "identity_provider": {
-                    "$ref": "#/components/schemas/IdentityProvider"
+                    "$ref": "#/components/schemas/IdentityProviderRequest"
                   }
                 }
               }
@@ -7401,7 +7401,7 @@
         "type": "object",
         "properties": {
           "identity_provider": {
-            "$ref": "#/components/schemas/IdentityProvider"
+            "$ref": "#/components/schemas/IdentityProviderRequest"
           }
         },
         "example": {
@@ -7413,6 +7413,62 @@
             "registrable": false,
             "type": "internal"
           }
+        }
+      },
+      "IdentityProviderRequest": {
+        "title": "IdentityProviderRequest",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "backend_id": {
+            "type": "string"
+          },
+          "check_password": {
+            "type": "boolean"
+          },
+          "choose_session": {
+            "type": "boolean"
+          },
+          "totpable": {
+            "type": "boolean"
+          },
+          "enforce_totp": {
+            "type": "boolean"
+          },
+          "webauthnable": {
+            "type": "boolean"
+          },
+          "enforce_webauthn": {
+            "type": "boolean"
+          },
+          "registrable": {
+            "type": "boolean"
+          },
+          "user_editable": {
+            "type": "boolean"
+          },
+          "consentable": {
+            "type": "boolean"
+          },
+          "confirmable": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "example": {
+          "choose_session": true,
+          "confirmable": false,
+          "consentable": false,
+          "name": "Created fom API",
+          "registrable": false,
+          "type": "internal"
         }
       },
       "IdentityProvider": {
@@ -7568,7 +7624,7 @@
         "type": "object",
         "properties": {
           "identity_provider": {
-            "$ref": "#/components/schemas/IdentityProvider"
+            "$ref": "#/components/schemas/IdentityProviderRequest"
           }
         },
         "example": {
