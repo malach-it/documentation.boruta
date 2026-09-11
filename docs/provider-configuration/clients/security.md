@@ -26,6 +26,10 @@ The type of the generated key pairs is tied to the signature algorithm used for 
 
 <div class="parameters">
 
+__Signatures adapter__ defines the adapter used to generate and use the client's cryptographic keys. The internal and Universal signatures adapters are available by default.
+
+__Key type__ defines the type and parameters of the key pair generated for the client. RSA keys require a modulus and exponent size, elliptic curve keys require a curve, and Universal keys use the Universal signatures adapter.
+
 __ID token signature algorithm__ is the algorithm used to sign ID Token JWTs. It have to be in correspondance with the key pair type.
 
 __Userinfo response signature algorithm__ is the algorithm used to sign userinfo response JWTs, the response being possibily not encoded and signed. It have to be in correspondance with the key pair type.
@@ -41,6 +45,10 @@ __Authorize scope__ would determine if the client defines the specific public an
 __Authorized scopes__ would be the list of scopes that can be granted with this client.
 
 __Check public client id__ enforces the check of the presentation `vp_token` against the `client_id` parameter in OpenID 4 Verifiable Presentations flows.
+
+__Trusted hosts__ defines the hosts from which the client is allowed to retrieve remote resources such as a JSON Web Key Set.
+
+__Trusted authorities__ defines the trusted decentralized identifiers authorized as authorities for the client.
 
 ### Proof Key for Code Exchange
 

@@ -16,6 +16,8 @@ __BORUTA_REMEMBER_ME_COOKIE__ defines the identity remember-me cookie name. Defa
 
 __MAX_LOG_RETENTION_DAYS__ defines how many days server logs are retained. Defaults to `60`.
 
+__DISABLE_FILE_LOGGING__ disables file logging when set to `true`. Console logging remains enabled. Defaults to `false`.
+
 </div>
 
 ## Database variables
@@ -66,11 +68,15 @@ __BORUTA_ADMIN_BIND__ defines the IP address the administration server binds to.
 
 __BORUTA_ADMIN_PORT__ defines the port where the administration server listens. Defaults to `8081` in releases.
 
+__BORUTA_ADMIN_SERVER__ enables the administration HTTP listener. Defaults to `true` in releases.
+
 __BORUTA_ADMIN_BASE_URL__ defines the administration HTTP endpoint base URL, without trailing slash.
 
 __BORUTA_SUB_RESTRICTED__ restricts administration access to a single user id when set.
 
 __BORUTA_ORGANIZATION_RESTRICTED__ restricts administration access to a single organization id when set.
+
+__BORUTA_COMMAND_SUB__ defines the subject recorded for commands executed with `boruta-cli`. Defaults to the current operating system user and hostname.
 
 </div>
 
@@ -85,6 +91,8 @@ __BORUTA_OAUTH_HOST__ defines the public host where the OAuth server is deployed
 __BORUTA_OAUTH_BIND__ defines the IP address the OAuth server binds to. Defaults to `::`.
 
 __BORUTA_OAUTH_PORT__ defines the port where the OAuth server listens. Defaults to `8080` in releases.
+
+__BORUTA_OAUTH_SERVER__ enables the OAuth HTTP listener. Defaults to `true` in releases.
 
 __BORUTA_OAUTH_ACCEPTORS__ defines the number of acceptor processes for the OAuth server. Defaults to `8`.
 
@@ -105,6 +113,10 @@ __BORUTA_GATEWAY_HTTPS_SERVER__ enables the HTTPS gateway listener. Defaults to 
 __BORUTA_GATEWAY_HTTPS_PORT__ defines the HTTPS gateway port. Defaults to `8043`.
 
 __BORUTA_GATEWAY_HTTPS_VERIFY_CLIENT_CERTIFICATE__ requires and verifies client certificates on the HTTPS gateway listener. Defaults to `false`.
+
+__BORUTA_GATEWAY_MOUNTED_CERTIFICATE_PATH__ defines the path to a mounted certificate used by the HTTPS gateway listener. It must be set together with `BORUTA_GATEWAY_MOUNTED_PRIVATE_KEY_PATH`.
+
+__BORUTA_GATEWAY_MOUNTED_PRIVATE_KEY_PATH__ defines the path to the private key associated with the mounted HTTPS gateway certificate. It must be set together with `BORUTA_GATEWAY_MOUNTED_CERTIFICATE_PATH`.
 
 __BORUTA_GATEWAY_SIDECAR__ enables the HTTP sidecar gateway listener. Defaults to `false` in releases.
 

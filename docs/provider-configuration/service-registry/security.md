@@ -31,6 +31,12 @@ __Timeout (ms)__ defines the maximum throttling wait time before the request is 
 
 __Memory length__ defines how many recent rate-limit entries are kept in memory for the upstream.
 
+### Noise cancelling
+
+__Enable noise cancelling__ enables Phi-based filtering of requests that do not match the trained upstream API model.
+
+__OpenAPI specification__ defines the JSON or YAML OpenAPI document used to train the Phi noise-cancelling model. The uploaded specification is not stored.
+
 </div>
 
 ## User interface
