@@ -22,6 +22,7 @@ const sidebars = {
       items: [],
     },
     'quickstart',
+    'command-line-interface',
     'credential-issuance',
     'credentials-presentation',
     {
