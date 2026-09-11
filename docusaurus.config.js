@@ -45,6 +45,13 @@ const config = {
           editUrl:
             'https://github.com/malach-it/developers.boruta/tree/master',
         },
+        blog: {
+          path: 'blog',
+          routeBasePath: 'blog',
+          showReadingTime: true,
+          editUrl:
+            'https://github.com/malach-it/developers.boruta/tree/master',
+        },
         api: {
           path: "openapi/boruta-admin.openapi.json",
           routeBasePath: "/api",
@@ -82,6 +89,11 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left',
+          }
         ],
       },
       footer: {
