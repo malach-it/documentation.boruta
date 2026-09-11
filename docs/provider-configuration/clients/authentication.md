@@ -27,6 +27,8 @@ Client attributes help to __manage the authorization capabilities for OAuth 2.0 
 
  __Client JWT authentication signature algorithm__ gives ways to select the used client JWT signature algorithm. Have to be symetric for `client_secret_jwt` and asymetric for `client_private_key`.
 
+ __Client JWT authentication public key__ defines the PEM-encoded public key used to verify assertions when an asymmetric client JWT authentication algorithm is selected.
+
  __Confidential__ define if the client is set to be confidential as stated in OAuth 2.0 specification.
 
 </div>

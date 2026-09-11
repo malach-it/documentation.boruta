@@ -31,6 +31,8 @@ Public clients are used in __Verifiable Credentials presentations__. They are id
 
  __Access token TTL__ would be the access tokens time to live.
 
+ __Agent token TTL__ would be the time to live of tokens issued through the agent credentials grant.
+
  __Authorization code TTL__ would be the time to live of codes during authorization code grant.
 
  __Refresh token TTL__ would be the time to live of refresh tokens helping to obtain newly generated access tokens.
