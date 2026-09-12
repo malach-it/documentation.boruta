@@ -82,6 +82,11 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            to: '/blog',
+            label: 'Updates',
+            position: 'left',
+          }
         ],
       },
       footer: {
