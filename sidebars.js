@@ -202,7 +202,7 @@ const sidebars = {
         {
           type: 'doc',
           id: 'dashboards/tokens',
-          label: '(WIP) Tokens'
+          label: 'Tokens'
         },
       ],
     },
