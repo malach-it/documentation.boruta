@@ -1,4 +1,4 @@
-# (WIP) Tokens dashboard
+# Tokens dashboard
 
 The tokens dashboard helps __monitor tokens and authorization artifacts__ issued by boruta from the administration interface. It gives administrators a detailed view of issued access tokens, authorization codes, pre-authorized codes, and related records. This dashboard is useful to inspect token volume, token type distribution, granted scopes, lifecycle status, and relationships between artifacts created during OAuth 2.0, OpenID Connect, and Verifiable Credential flows.
 
