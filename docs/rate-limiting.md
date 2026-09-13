@@ -30,7 +30,7 @@ Rate limiting applies to the authorization server API pipeline, including:
 - OAuth endpoints such as `/oauth/token`, `/oauth/introspect`, `/oauth/revoke`, `/oauth/userinfo`, and pushed authorization requests.
 - OpenID endpoints such as discovery, JWKS, credential, and deferred credential endpoints.
 - Metadata endpoints served through the JSON/JWT/event-stream API pipeline.
-- [WIP] Identity endpoints (end-user facing pages)
+- Identity endpoints (end-user facing pages)
 
 ## Response
 
