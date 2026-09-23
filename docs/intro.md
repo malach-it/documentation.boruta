@@ -1,5 +1,9 @@
 # (WIP) boruta server documentation
 
+:::info Status
+boruta is currently in an __open beta phase__. If you are interested in the project and the tools it provides, you are encouraged to test the product within your context. Production readiness will depend on your feedback, helping to fix possible bugs and improve the solution's usability. While mostly stable and security-assessed in some areas, boruta is a work in progress. Please read the [General Terms and Conditions](https://github.com/malach-it/boruta-server/blob/master/GENERAL_TERMS_AND_CONDITIONS.md).
+:::
+
 ## What is boruta?
 
 boruta is an __OAuth 2.0 and satellites specifications authorization server implementation__. As an __Identity and Access Management solution__, it helps centralize authorization and identity related issues within your infrastructures. boruta stands as a server that help for the users to authenticate and to expose and apply access rules for your HTTP services (APIs) enabling better security. On top of current identity infrastructures, boruta __implements decentralized identity specifications__ enabling it to provide a secure issuer and verifier along with an integrated wallet.
