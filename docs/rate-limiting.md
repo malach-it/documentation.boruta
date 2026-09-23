@@ -10,18 +10,14 @@ The probability is made of the product of the past aggregates per unit and is no
 
 ## Policy
 
+:::caution Server hard coded values
 The authorization server API pipeline is configured with the following hard coded policy to all authorization server requests:
-
-```elixir
-plug RateLimit, count: 10, time_unit: :second, penality: 500, timeout: 5_000
-```
-
-Configuration:
 
 - `count: 10` is the target request count for the selected time unit.
 - `time_unit: :second` evaluates request activity per second.
 - `penality: 500` controls how strongly repeated bursts increase the throttling delay.
 - `timeout: 5_000` is the maximum tolerated throttling delay in milliseconds before the request is rejected.
+:::
 
 ## Limited endpoints
 
@@ -34,7 +30,7 @@ Rate limiting applies to the authorization server API pipeline, including:
 
 ## Response
 
-When a request is rejected by the limiter, boruta returns:
+When a request is rejected by the limiter, the server responds:
 
 ```http
 HTTP/1.1 429 Too Many Requests
