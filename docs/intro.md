@@ -1,7 +1,7 @@
 # (WIP) boruta server documentation
 
 :::info Status
-boruta is currently in an __open beta phase__. If you are interested in the project and the tools it provides, you are encouraged to test the product within your context. Production readiness will depend on your feedback, helping to fix possible bugs and improve the solution's usability. While mostly stable and security-assessed in some areas, boruta is a work in progress. Please read the [General Terms and Conditions](https://github.com/malach-it/boruta-server/blob/master/GENERAL_TERMS_AND_CONDITIONS.md).
+boruta is currently in an __open beta phase__. If you are interested in the project and the tools it provides, you are encouraged to test the software within your context. Production readiness will depend on your feedback, helping to fix possible bugs and improve the solution's usability. While mostly stable and security-assessed in some areas, boruta is a work in progress. Please read the [General Terms and Conditions](https://github.com/malach-it/boruta-server/blob/master/GENERAL_TERMS_AND_CONDITIONS.md).
 :::
 
 ## What is boruta?
