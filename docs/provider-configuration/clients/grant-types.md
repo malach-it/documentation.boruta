@@ -19,9 +19,15 @@ The Authorization Server allow to enable and disable the implemented flows for a
 
 __client_credentials__ switches the ability to perform the [Client Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4) flow interacting with the configured client.
 
+__agent_credentials__ switches the ability to issue an agent token for the configured client, binding the data and configuration supplied in the token request.
+
+__code_chain__ switches the ability to issue an authorization code from an ID token and optionally link it to a previous authorization code, forming a code chain.
+
 __password__ switches the ability to perform the [Resource Owner Password Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-4.3) flow interacting with the configured client.
 
 __authorization_code__ switches the ability to perform the [Authorization Code Grant](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1) flow interacting with the configured client.
+
+__agent_code__ switches the ability to exchange an authorization code for an agent token, binding the data and configuration supplied in the token request.
 
 __refresh_token__ switches the ability to perform the [Refresh Token](https://datatracker.ietf.org/doc/html/rfc6749#section-6) flow interacting with the configured client.
 
@@ -41,4 +47,3 @@ __introspect__ switches the ability to perform the [Token Introspection](https:/
 
 ## User interface
 ![client form](/assets/images/oauth-clients-grant-types.png)
-
