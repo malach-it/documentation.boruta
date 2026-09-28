@@ -6,9 +6,11 @@ boruta is currently in an __open beta phase__. If you are interested by the proj
 
 ## What is boruta?
 
-boruta is an __OAuth 2.0 and satellites specifications authorization server implementation__. As an __Identity and Access Management solution__, it helps to centralize authorization and identity related issues within your infrastructures. boruta stands as a server that help users to authenticate, authorize and apply access rules for your HTTP services (APIs) enabling better security. On top of current identity infrastructures, boruta __implements decentralized identity specifications__ providing a secure issuer and verifier along with a demo integrated wallet.
-
-boruta is composed of an __authorization server__, an __administration interface__, an __identity provider__ and an experimental __gateway__ for gathering all API security related needs for a serivce composed of one or more backends. It enables to have Single Sign On and identity federation capabilities following the OAuth 2.0 framework.
+boruta is an authorization server that aims to implement OAuth 2.0 and satelite
+specifications. On top of authorization, it provides identity management, an
+experimental gateway and administration interfaces. Those provide an identity
+and access management solution taht helps to solve identity related problems,
+up to decentralized identity.
 
 <div class="centered">
 
