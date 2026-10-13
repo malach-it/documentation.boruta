@@ -17,15 +17,15 @@ Backends parameters help to __manage identity storage and associated features__ 
 
 <div class="parameters">
 
-__Add metadata field__ add an attribute to users' schema that would sit on top of base identification credentials. Those would be present in resource owner claims.
+<p><strong data-param="metadata_fields">Add metadata field</strong> add an attribute to users' schema that would sit on top of base identification credentials. Those would be present in resource owner claims.</p>
 
 ### Metadata field
 
-__User editable__ define if users can update the metadata field.
+<p><strong data-param="user_editable">User editable</strong> define if users can update the metadata field.</p>
 
-__Scope restriction (leave blank for no restriction)__ gives the list of scopes needed to access the metadata field.
+<p><strong data-param="scopes">Scope restriction (leave blank for no restriction)</strong> gives the list of scopes needed to access the metadata field.</p>
 
-__Attribute name__ is the name of the attribute, the `key` of the attribute when expressed as JSON.
+<p><strong data-param="attribute_name">Attribute name</strong> is the name of the attribute, the `key` of the attribute when expressed as JSON.</p>
 
 </div>
 

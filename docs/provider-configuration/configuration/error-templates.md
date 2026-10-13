@@ -6,17 +6,33 @@ While the user navigates through authentication or authorization, he can __encou
 
 <div class="parameters">
 
-__Bad request__ encountered when the user emits a bad request.
-- __reason.message__ variable is available on the bad request template. It gives the current error message.
+<div class="parameter-entry">
+<p><strong data-param="400">Bad request</strong> encountered when the user emits a bad request.</p>
+<ul>
+<li><strong>reason.message</strong> variable is available on the bad request template. It gives the current error message.</li>
+</ul>
+</div>
 
-__Forbidden__ encountered when the user is forbidden to access the page.
-- __reason.message__ variable is available on the forbidden template. It gives the current error message.
+<div class="parameter-entry">
+<p><strong data-param="403">Forbidden</strong> encountered when the user is forbidden to access the page.</p>
+<ul>
+<li><strong>reason.message</strong> variable is available on the forbidden template. It gives the current error message.</li>
+</ul>
+</div>
 
-__Not found__ encountered when the requested page is not found.
-- __reason.message__ variable is available on the not found template. It gives the current error message.
+<div class="parameter-entry">
+<p><strong data-param="404">Not found</strong> encountered when the requested page is not found.</p>
+<ul>
+<li><strong>reason.message</strong> variable is available on the not found template. It gives the current error message.</li>
+</ul>
+</div>
 
-__Internal server error__ encountered when the server crashes.
-- __reason.message__ variable is available on the internal server error template. It gives the current error message.
+<div class="parameter-entry">
+<p><strong data-param="500">Internal server error</strong> encountered when the server crashes.</p>
+<ul>
+<li><strong>reason.message</strong> variable is available on the internal server error template. It gives the current error message.</li>
+</ul>
+</div>
 
 </div>
 

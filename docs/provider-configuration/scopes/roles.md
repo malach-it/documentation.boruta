@@ -6,9 +6,9 @@ Roles are defined as a __set of scopes__ which helps to give access to them more
 
 <div class="parameters">
 
-__Name__ is the name of the role, helping to identify it both in the administration interface than in user claims.
+<p><strong data-param="name">Name</strong> is the name of the role, helping to identify it both in the administration interface than in user claims.</p>
 
-__Add a scope__ adds a scope to the role giving the list of accessible scopes.
+<p><strong data-param="scopes">Add a scope</strong> adds a scope to the role giving the list of accessible scopes.</p>
 
 </div>
 

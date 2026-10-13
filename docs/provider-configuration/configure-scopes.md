@@ -6,11 +6,11 @@ Scopes as stated in OAuth 2.0 specification are made of a string that represent 
 
 <div class="parameters">
 
-__label__ a string that would be displayed discussing the scope, in consent page for instance.
+<p><strong data-param="label">label</strong> a string that would be displayed discussing the scope, in consent page for instance.</p>
 
-__name__ a string representing the OAuth scope
+<p><strong data-param="name">name</strong> a string representing the OAuth scope</p>
 
-__public__ set if the scope is public or private, see below
+<p><strong data-param="public">public</strong> set if the scope is public or private, see below</p>
 
 </div>
 

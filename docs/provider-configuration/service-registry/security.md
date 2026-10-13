@@ -15,27 +15,27 @@ Security parameters help __protect upstream connections and traffic volume__. Th
 
 <div class="parameters">
 
-__Mutual TLS__ makes the gateway use mutual TLS when connecting to the upstream. This option requires the upstream scheme to be `https`.
+<p><strong data-param="mtls_enabled">Mutual TLS</strong> makes the gateway use mutual TLS when connecting to the upstream. This option requires the upstream scheme to be `https`.</p>
 
-__Enable rate limiting__ applies request throttling before traffic is forwarded to the upstream.
+<p><strong data-param="rate_limit_enabled">Enable rate limiting</strong> applies request throttling before traffic is forwarded to the upstream.</p>
 
 ### Rate limiting
 
-__Request count__ defines how many requests are accepted during the selected time unit.
+<p><strong data-param="rate_limit_count">Request count</strong> defines how many requests are accepted during the selected time unit.</p>
 
-__Time unit__ defines the rate-limit window. Accepted values are `millisecond`, `second`, and `minute`.
+<p><strong data-param="rate_limit_time_unit">Time unit</strong> defines the rate-limit window. Accepted values are `millisecond`, `second`, and `minute`.</p>
 
-__Penality (ms)__ defines the delay applied after the accepted request count is exceeded.
+<p><strong data-param="rate_limit_penality">Penality (ms)</strong> defines the delay applied after the accepted request count is exceeded.</p>
 
-__Timeout (ms)__ defines the maximum throttling wait time before the request is rejected.
+<p><strong data-param="rate_limit_timeout">Timeout (ms)</strong> defines the maximum throttling wait time before the request is rejected.</p>
 
-__Memory length__ defines how many recent rate-limit entries are kept in memory for the upstream.
+<p><strong data-param="rate_limit_memory_length">Memory length</strong> defines how many recent rate-limit entries are kept in memory for the upstream.</p>
 
 ### Noise cancelling
 
-__Enable noise cancelling__ enables Phi-based filtering of requests that do not match the trained upstream API model.
+<p><strong data-param="noise_cancelling_enabled">Enable noise cancelling</strong> enables Phi-based filtering of requests that do not match the trained upstream API model.</p>
 
-__OpenAPI specification__ defines the JSON or YAML OpenAPI document used to train the Phi noise-cancelling model. The uploaded specification is not stored.
+<p><strong data-param="openapi_spec">OpenAPI specification</strong> defines the JSON or YAML OpenAPI document used to train the Phi noise-cancelling model. The uploaded specification is not stored.</p>
 
 </div>
 

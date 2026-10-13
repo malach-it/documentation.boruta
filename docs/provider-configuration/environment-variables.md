@@ -6,17 +6,17 @@ boruta-server is configured at runtime with environment variables. Those variabl
 
 <div class="parameters">
 
-__SECRET_KEY_BASE__ is the Phoenix secret key base used by the server. It must be at least 64 characters long.
+<p><strong data-param="SECRET_KEY_BASE">SECRET_KEY_BASE</strong> is the Phoenix secret key base used by the server. It must be at least 64 characters long.</p>
 
-__BORUTA_SESSION_COOKIE_KEY__ defines the session cookie key shared by the web, identity, and administration endpoints. Defaults to `_boruta_web_key`.
+<p><strong data-param="BORUTA_SESSION_COOKIE_KEY">BORUTA_SESSION_COOKIE_KEY</strong> defines the session cookie key shared by the web, identity, and administration endpoints. Defaults to `_boruta_web_key`.</p>
 
-__BORUTA_SESSION_COOKIE_SIGNING_SALT__ defines the signing salt used for the shared session cookie. Defaults to `OCKBuS86`.
+<p><strong data-param="BORUTA_SESSION_COOKIE_SIGNING_SALT">BORUTA_SESSION_COOKIE_SIGNING_SALT</strong> defines the signing salt used for the shared session cookie. Defaults to `OCKBuS86`.</p>
 
-__BORUTA_REMEMBER_ME_COOKIE__ defines the identity remember-me cookie name. Defaults to `_boruta_identity_web_user_remember_me`.
+<p><strong data-param="BORUTA_REMEMBER_ME_COOKIE">BORUTA_REMEMBER_ME_COOKIE</strong> defines the identity remember-me cookie name. Defaults to `_boruta_identity_web_user_remember_me`.</p>
 
-__MAX_LOG_RETENTION_DAYS__ defines how many days server logs are retained. Defaults to `60`.
+<p><strong data-param="MAX_LOG_RETENTION_DAYS">MAX_LOG_RETENTION_DAYS</strong> defines how many days server logs are retained. Defaults to `60`.</p>
 
-__DISABLE_FILE_LOGGING__ disables file logging when set to `true`. Console logging remains enabled. Defaults to `false`.
+<p><strong data-param="DISABLE_FILE_LOGGING">DISABLE_FILE_LOGGING</strong> disables file logging when set to `true`. Console logging remains enabled. Defaults to `false`.</p>
 
 </div>
 
@@ -24,15 +24,15 @@ __DISABLE_FILE_LOGGING__ disables file logging when set to `true`. Console loggi
 
 <div class="parameters">
 
-__POSTGRES_USER__ defines the PostgreSQL user used by boruta applications.
+<p><strong data-param="POSTGRES_USER">POSTGRES_USER</strong> defines the PostgreSQL user used by boruta applications.</p>
 
-__POSTGRES_PASSWORD__ defines the PostgreSQL password used by boruta applications.
+<p><strong data-param="POSTGRES_PASSWORD">POSTGRES_PASSWORD</strong> defines the PostgreSQL password used by boruta applications.</p>
 
-__POSTGRES_DATABASE__ defines the PostgreSQL database name.
+<p><strong data-param="POSTGRES_DATABASE">POSTGRES_DATABASE</strong> defines the PostgreSQL database name.</p>
 
-__POSTGRES_HOST__ defines the PostgreSQL host.
+<p><strong data-param="POSTGRES_HOST">POSTGRES_HOST</strong> defines the PostgreSQL host.</p>
 
-__POOL_SIZE__ defines the PostgreSQL pool size of each application. The total connection count depends on the applications enabled in the release. Defaults to `5`.
+<p><strong data-param="POOL_SIZE">POOL_SIZE</strong> defines the PostgreSQL pool size of each application. The total connection count depends on the applications enabled in the release. Defaults to `5`.</p>
 
 </div>
 
@@ -40,11 +40,11 @@ __POOL_SIZE__ defines the PostgreSQL pool size of each application. The total co
 
 <div class="parameters">
 
-__LIBCLUSTER_HOSTS__ defines a comma-separated list of Erlang node names used for Docker Compose discovery, for example `boruta@boruta-1,boruta@boruta-2`.
+<p><strong data-param="LIBCLUSTER_HOSTS">LIBCLUSTER_HOSTS</strong> defines a comma-separated list of Erlang node names used for Docker Compose discovery, for example `boruta@boruta-1,boruta@boruta-2`.</p>
 
-__K8S_NAMESPACE__ configures Kubernetes service discovery when it is set together with `K8S_SELECTOR`.
+<p><strong data-param="K8S_NAMESPACE">K8S_NAMESPACE</strong> configures Kubernetes service discovery when it is set together with `K8S_SELECTOR`.</p>
 
-__K8S_SELECTOR__ configures Kubernetes service discovery when it is set together with `K8S_NAMESPACE`.
+<p><strong data-param="K8S_SELECTOR">K8S_SELECTOR</strong> configures Kubernetes service discovery when it is set together with `K8S_NAMESPACE`.</p>
 
 </div>
 
@@ -52,31 +52,31 @@ __K8S_SELECTOR__ configures Kubernetes service discovery when it is set together
 
 <div class="parameters">
 
-__BORUTA_ADMIN_OAUTH_CLIENT_ID__ defines the OAuth client id used by the administration interface. It is used when seeding the default administration client.
+<p><strong data-param="BORUTA_ADMIN_OAUTH_CLIENT_ID">BORUTA_ADMIN_OAUTH_CLIENT_ID</strong> defines the OAuth client id used by the administration interface. It is used when seeding the default administration client.</p>
 
-__BORUTA_ADMIN_OAUTH_CLIENT_SECRET__ defines the OAuth client secret used by the administration interface. It is used when seeding the default administration client.
+<p><strong data-param="BORUTA_ADMIN_OAUTH_CLIENT_SECRET">BORUTA_ADMIN_OAUTH_CLIENT_SECRET</strong> defines the OAuth client secret used by the administration interface. It is used when seeding the default administration client.</p>
 
-__BORUTA_ADMIN_OAUTH_BASE_URL__ defines the authorization server base URL used by the administration interface, without trailing slash.
+<p><strong data-param="BORUTA_ADMIN_OAUTH_BASE_URL">BORUTA_ADMIN_OAUTH_BASE_URL</strong> defines the authorization server base URL used by the administration interface, without trailing slash.</p>
 
-__BORUTA_ADMIN_EMAIL__ defines the first administration user email. It is used by the setup task.
+<p><strong data-param="BORUTA_ADMIN_EMAIL">BORUTA_ADMIN_EMAIL</strong> defines the first administration user email. It is used by the setup task.</p>
 
-__BORUTA_ADMIN_PASSWORD__ defines the first administration user password. It is used by the setup task.
+<p><strong data-param="BORUTA_ADMIN_PASSWORD">BORUTA_ADMIN_PASSWORD</strong> defines the first administration user password. It is used by the setup task.</p>
 
-__BORUTA_ADMIN_HOST__ defines the public host where the administration server is deployed.
+<p><strong data-param="BORUTA_ADMIN_HOST">BORUTA_ADMIN_HOST</strong> defines the public host where the administration server is deployed.</p>
 
-__BORUTA_ADMIN_BIND__ defines the IP address the administration server binds to.
+<p><strong data-param="BORUTA_ADMIN_BIND">BORUTA_ADMIN_BIND</strong> defines the IP address the administration server binds to.</p>
 
-__BORUTA_ADMIN_PORT__ defines the port where the administration server listens. Defaults to `8081` in releases.
+<p><strong data-param="BORUTA_ADMIN_PORT">BORUTA_ADMIN_PORT</strong> defines the port where the administration server listens. Defaults to `8081` in releases.</p>
 
-__BORUTA_ADMIN_SERVER__ enables the administration HTTP listener. Defaults to `true` in releases.
+<p><strong data-param="BORUTA_ADMIN_SERVER">BORUTA_ADMIN_SERVER</strong> enables the administration HTTP listener. Defaults to `true` in releases.</p>
 
-__BORUTA_ADMIN_BASE_URL__ defines the administration HTTP endpoint base URL, without trailing slash.
+<p><strong data-param="BORUTA_ADMIN_BASE_URL">BORUTA_ADMIN_BASE_URL</strong> defines the administration HTTP endpoint base URL, without trailing slash.</p>
 
-__BORUTA_SUB_RESTRICTED__ restricts administration access to a single user id when set.
+<p><strong data-param="BORUTA_SUB_RESTRICTED">BORUTA_SUB_RESTRICTED</strong> restricts administration access to a single user id when set.</p>
 
-__BORUTA_ORGANIZATION_RESTRICTED__ restricts administration access to a single organization id when set.
+<p><strong data-param="BORUTA_ORGANIZATION_RESTRICTED">BORUTA_ORGANIZATION_RESTRICTED</strong> restricts administration access to a single organization id when set.</p>
 
-__BORUTA_COMMAND_SUB__ defines the subject recorded for commands executed with `boruta-cli`. Defaults to the current operating system user and hostname.
+<p><strong data-param="BORUTA_COMMAND_SUB">BORUTA_COMMAND_SUB</strong> defines the subject recorded for commands executed with `boruta-cli`. Defaults to the current operating system user and hostname.</p>
 
 </div>
 
@@ -84,19 +84,19 @@ __BORUTA_COMMAND_SUB__ defines the subject recorded for commands executed with `
 
 <div class="parameters">
 
-__BORUTA_OAUTH_SCHEME__ defines the scheme used for OAuth URL generation. Defaults to `https`.
+<p><strong data-param="BORUTA_OAUTH_SCHEME">BORUTA_OAUTH_SCHEME</strong> defines the scheme used for OAuth URL generation. Defaults to `https`.</p>
 
-__BORUTA_OAUTH_HOST__ defines the public host where the OAuth server is deployed.
+<p><strong data-param="BORUTA_OAUTH_HOST">BORUTA_OAUTH_HOST</strong> defines the public host where the OAuth server is deployed.</p>
 
-__BORUTA_OAUTH_BIND__ defines the IP address the OAuth server binds to. Defaults to `::`.
+<p><strong data-param="BORUTA_OAUTH_BIND">BORUTA_OAUTH_BIND</strong> defines the IP address the OAuth server binds to. Defaults to `::`.</p>
 
-__BORUTA_OAUTH_PORT__ defines the port where the OAuth server listens. Defaults to `8080` in releases.
+<p><strong data-param="BORUTA_OAUTH_PORT">BORUTA_OAUTH_PORT</strong> defines the port where the OAuth server listens. Defaults to `8080` in releases.</p>
 
-__BORUTA_OAUTH_SERVER__ enables the OAuth HTTP listener. Defaults to `true` in releases.
+<p><strong data-param="BORUTA_OAUTH_SERVER">BORUTA_OAUTH_SERVER</strong> enables the OAuth HTTP listener. Defaults to `true` in releases.</p>
 
-__BORUTA_OAUTH_ACCEPTORS__ defines the number of acceptor processes for the OAuth server. Defaults to `8`.
+<p><strong data-param="BORUTA_OAUTH_ACCEPTORS">BORUTA_OAUTH_ACCEPTORS</strong> defines the number of acceptor processes for the OAuth server. Defaults to `8`.</p>
 
-__BORUTA_OAUTH_BASE_URL__ defines the OAuth server HTTP endpoint base URL, without trailing slash.
+<p><strong data-param="BORUTA_OAUTH_BASE_URL">BORUTA_OAUTH_BASE_URL</strong> defines the OAuth server HTTP endpoint base URL, without trailing slash.</p>
 
 </div>
 
@@ -104,41 +104,41 @@ __BORUTA_OAUTH_BASE_URL__ defines the OAuth server HTTP endpoint base URL, witho
 
 <div class="parameters">
 
-__BORUTA_GATEWAY_SERVER__ enables the HTTP gateway listener. Defaults to `false` in releases.
+<p><strong data-param="BORUTA_GATEWAY_SERVER">BORUTA_GATEWAY_SERVER</strong> enables the HTTP gateway listener. Defaults to `false` in releases.</p>
 
-__BORUTA_GATEWAY_PORT__ defines the HTTP gateway port. Defaults to `8083`.
+<p><strong data-param="BORUTA_GATEWAY_PORT">BORUTA_GATEWAY_PORT</strong> defines the HTTP gateway port. Defaults to `8083`.</p>
 
-__BORUTA_GATEWAY_HTTPS_SERVER__ enables the HTTPS gateway listener. Defaults to `false`.
+<p><strong data-param="BORUTA_GATEWAY_HTTPS_SERVER">BORUTA_GATEWAY_HTTPS_SERVER</strong> enables the HTTPS gateway listener. Defaults to `false`.</p>
 
-__BORUTA_GATEWAY_HTTPS_PORT__ defines the HTTPS gateway port. Defaults to `8043`.
+<p><strong data-param="BORUTA_GATEWAY_HTTPS_PORT">BORUTA_GATEWAY_HTTPS_PORT</strong> defines the HTTPS gateway port. Defaults to `8043`.</p>
 
-__BORUTA_GATEWAY_HTTPS_VERIFY_CLIENT_CERTIFICATE__ requires and verifies client certificates on the HTTPS gateway listener. Defaults to `false`.
+<p><strong data-param="BORUTA_GATEWAY_HTTPS_VERIFY_CLIENT_CERTIFICATE">BORUTA_GATEWAY_HTTPS_VERIFY_CLIENT_CERTIFICATE</strong> requires and verifies client certificates on the HTTPS gateway listener. Defaults to `false`.</p>
 
-__BORUTA_GATEWAY_MOUNTED_CERTIFICATE_PATH__ defines the path to a mounted certificate used by the HTTPS gateway listener. It must be set together with `BORUTA_GATEWAY_MOUNTED_PRIVATE_KEY_PATH`.
+<p><strong data-param="BORUTA_GATEWAY_MOUNTED_CERTIFICATE_PATH">BORUTA_GATEWAY_MOUNTED_CERTIFICATE_PATH</strong> defines the path to a mounted certificate used by the HTTPS gateway listener. It must be set together with `BORUTA_GATEWAY_MOUNTED_PRIVATE_KEY_PATH`.</p>
 
-__BORUTA_GATEWAY_MOUNTED_PRIVATE_KEY_PATH__ defines the path to the private key associated with the mounted HTTPS gateway certificate. It must be set together with `BORUTA_GATEWAY_MOUNTED_CERTIFICATE_PATH`.
+<p><strong data-param="BORUTA_GATEWAY_MOUNTED_PRIVATE_KEY_PATH">BORUTA_GATEWAY_MOUNTED_PRIVATE_KEY_PATH</strong> defines the path to the private key associated with the mounted HTTPS gateway certificate. It must be set together with `BORUTA_GATEWAY_MOUNTED_CERTIFICATE_PATH`.</p>
 
-__BORUTA_GATEWAY_SIDECAR__ enables the HTTP sidecar gateway listener. Defaults to `false` in releases.
+<p><strong data-param="BORUTA_GATEWAY_SIDECAR">BORUTA_GATEWAY_SIDECAR</strong> enables the HTTP sidecar gateway listener. Defaults to `false` in releases.</p>
 
-__BORUTA_GATEWAY_SIDECAR_PORT__ defines the HTTP sidecar gateway port. Defaults to `8084`.
+<p><strong data-param="BORUTA_GATEWAY_SIDECAR_PORT">BORUTA_GATEWAY_SIDECAR_PORT</strong> defines the HTTP sidecar gateway port. Defaults to `8084`.</p>
 
-__BORUTA_GATEWAY_SIDECAR_HTTPS_SERVER__ enables the HTTPS sidecar gateway listener. Defaults to `false`.
+<p><strong data-param="BORUTA_GATEWAY_SIDECAR_HTTPS_SERVER">BORUTA_GATEWAY_SIDECAR_HTTPS_SERVER</strong> enables the HTTPS sidecar gateway listener. Defaults to `false`.</p>
 
-__BORUTA_GATEWAY_SIDECAR_HTTPS_PORT__ defines the HTTPS sidecar gateway port. Defaults to `8044`.
+<p><strong data-param="BORUTA_GATEWAY_SIDECAR_HTTPS_PORT">BORUTA_GATEWAY_SIDECAR_HTTPS_PORT</strong> defines the HTTPS sidecar gateway port. Defaults to `8044`.</p>
 
-__BORUTA_GATEWAY_SIDECAR_HTTPS_VERIFY_CLIENT_CERTIFICATE__ requires and verifies client certificates on the HTTPS sidecar gateway listener. Defaults to `false`.
+<p><strong data-param="BORUTA_GATEWAY_SIDECAR_HTTPS_VERIFY_CLIENT_CERTIFICATE">BORUTA_GATEWAY_SIDECAR_HTTPS_VERIFY_CLIENT_CERTIFICATE</strong> requires and verifies client certificates on the HTTPS sidecar gateway listener. Defaults to `false`.</p>
 
-__BORUTA_GATEWAY_PROXY_SERVER__ enables the HTTP forward proxy listener. Defaults to `false` in releases.
+<p><strong data-param="BORUTA_GATEWAY_PROXY_SERVER">BORUTA_GATEWAY_PROXY_SERVER</strong> enables the HTTP forward proxy listener. Defaults to `false` in releases.</p>
 
-__BORUTA_GATEWAY_PROXY_PORT__ defines the HTTP forward proxy port. Defaults to `5555`.
+<p><strong data-param="BORUTA_GATEWAY_PROXY_PORT">BORUTA_GATEWAY_PROXY_PORT</strong> defines the HTTP forward proxy port. Defaults to `5555`.</p>
 
-__BORUTA_GATEWAY_HTTPS_PROXY_SERVER__ enables the HTTPS forward proxy listener. Defaults to `false` in releases.
+<p><strong data-param="BORUTA_GATEWAY_HTTPS_PROXY_SERVER">BORUTA_GATEWAY_HTTPS_PROXY_SERVER</strong> enables the HTTPS forward proxy listener. Defaults to `false` in releases.</p>
 
-__BORUTA_GATEWAY_HTTPS_PROXY_PORT__ defines the HTTPS forward proxy port. Defaults to `4444`.
+<p><strong data-param="BORUTA_GATEWAY_HTTPS_PROXY_PORT">BORUTA_GATEWAY_HTTPS_PROXY_PORT</strong> defines the HTTPS forward proxy port. Defaults to `4444`.</p>
 
-__BORUTA_GATEWAY_ACCEPTORS__ defines the number of acceptor processes for gateway, sidecar, and proxy listeners. Defaults to `8`.
+<p><strong data-param="BORUTA_GATEWAY_ACCEPTORS">BORUTA_GATEWAY_ACCEPTORS</strong> defines the number of acceptor processes for gateway, sidecar, and proxy listeners. Defaults to `8`.</p>
 
-__BORUTA_GATEWAY_CONFIGURATION_PATH__ defines the path containing the gateway static configuration file. Defaults to `config/example-configuration.yml` in releases.
+<p><strong data-param="BORUTA_GATEWAY_CONFIGURATION_PATH">BORUTA_GATEWAY_CONFIGURATION_PATH</strong> defines the path containing the gateway static configuration file. Defaults to `config/example-configuration.yml` in releases.</p>
 
 </div>
 
@@ -146,7 +146,7 @@ __BORUTA_GATEWAY_CONFIGURATION_PATH__ defines the path containing the gateway st
 
 <div class="parameters">
 
-__BORUTA_CONFIGURATION_PATH__ defines the path containing the boruta static configuration file.
+<p><strong data-param="BORUTA_CONFIGURATION_PATH">BORUTA_CONFIGURATION_PATH</strong> defines the path containing the boruta static configuration file.</p>
 
 </div>
 
@@ -154,10 +154,10 @@ __BORUTA_CONFIGURATION_PATH__ defines the path containing the boruta static conf
 
 <div class="parameters">
 
-__DID_RESOLVER_BASE_URL__ defines the DID resolver API endpoint, according to the W3C DID resolution specification. Defaults to `https://api.godiddy.com/1.0.0/universal-resolver`.
+<p><strong data-param="DID_RESOLVER_BASE_URL">DID_RESOLVER_BASE_URL</strong> defines the DID resolver API endpoint, according to the W3C DID resolution specification. Defaults to `https://api.godiddy.com/1.0.0/universal-resolver`.</p>
 
-__DID_REGISTRAR_BASE_URL__ defines the DID registrar API endpoint, according to the DID registration specification. Defaults to `https://api.godiddy.com/1.0.0/universal-registrar`.
+<p><strong data-param="DID_REGISTRAR_BASE_URL">DID_REGISTRAR_BASE_URL</strong> defines the DID registrar API endpoint, according to the DID registration specification. Defaults to `https://api.godiddy.com/1.0.0/universal-registrar`.</p>
 
-__DID_SERVICES_API_KEY__ defines the API key granting access to DID resolver and registrar services.
+<p><strong data-param="DID_SERVICES_API_KEY">DID_SERVICES_API_KEY</strong> defines the API key granting access to DID resolver and registrar services.</p>
 
 </div>

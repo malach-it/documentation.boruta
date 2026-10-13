@@ -17,19 +17,22 @@ Client attributes help to __manage the authorization capabilities for OAuth 2.0 
 
 <div class="parameters">
 
- __Client authentication methods__ enables to select the client supported authentication methods:
+<div class="parameter-entry">
+<p><strong data-param="token_endpoint_auth_methods">Client authentication methods</strong> enables to select the client supported authentication methods:</p>
+<ul>
+<li><strong>client_secret_basic</strong> uses HTTP basic to authenticate the client provided the <code>client_id</code> and the <code>client_secret</code></li>
+<li><strong>client_secret_post</strong> uses HTTP POST method to authenticate the client provided the <code>client_id</code> and the <code>client_secret</code></li>
+<li><strong>client_secret_jwt</strong> parses the request JWT that is to be signed using a symetric algorithm given the <code>client_secret</code></li>
+<li><strong>client_private_key</strong> parses the request JWT that is to be signed using an asymetric algorithm given the provided public key</li>
+</ul>
+</div>
 
-- __client_secret_basic__ uses HTTP basic to authenticate the client provided the `client_id` and the `client_secret`
-- __client_secret_post__ uses HTTP POST method to authenticate the client provided the `client_id` and the `client_secret`
-- __client_secret_jwt__ parses the request JWT that is to be signed using a symetric algorithm given the `client_secret`
-- __client_private_key__ parses the request JWT that is to be signed using an asymetric algorithm given the provided public key
 
+ <p><strong data-param="token_endpoint_jwt_auth_alg">Client JWT authentication signature algorithm</strong> gives ways to select the used client JWT signature algorithm. Have to be symetric for `client_secret_jwt` and asymetric for `client_private_key`.</p>
 
- __Client JWT authentication signature algorithm__ gives ways to select the used client JWT signature algorithm. Have to be symetric for `client_secret_jwt` and asymetric for `client_private_key`.
+ <p><strong data-param="jwt_public_key">Client JWT authentication public key</strong> defines the PEM-encoded public key used to verify assertions when an asymmetric client JWT authentication algorithm is selected.</p>
 
- __Client JWT authentication public key__ defines the PEM-encoded public key used to verify assertions when an asymmetric client JWT authentication algorithm is selected.
-
- __Confidential__ define if the client is set to be confidential as stated in OAuth 2.0 specification.
+ <p><strong data-param="confidential">Confidential</strong> define if the client is set to be confidential as stated in OAuth 2.0 specification.</p>
 
 </div>
 
@@ -50,7 +53,7 @@ The access to most of the OAuth and OpenID Connect provider endpoints is protect
 
 <div class="parameters">
 
-__identity provider__ enables to select the means of authentication for the users provided by an [Identity Provider](/docs/provider-configuration/configure-identity-providers)
+<p><strong data-param="identity_provider">identity provider</strong> enables to select the means of authentication for the users provided by an [Identity Provider](/docs/provider-configuration/configure-identity-providers)</p>
 
 </div>
 
