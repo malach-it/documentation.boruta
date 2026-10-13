@@ -17,65 +17,77 @@ Backends parameters help to __manage identity storage and associated features__ 
 
 <div class="parameters">
 
-__Add Verifiable credential__ exposes a Verifiable Credential for the client, provided its [configuration](/docs/provider-configuration/backends/verifiable-credentials#verifiable-credentials-issuance).
+<p><strong data-param="verifiable_credentials">Add Verifiable credential</strong> exposes a Verifiable Credential for the client, provided its [configuration](/docs/provider-configuration/backends/verifiable-credentials#verifiable-credentials-issuance).</p>
 
-__Add Verifiable presentation__ enable the users to present Verifiable Credentials, given their [definition](/docs/provider-configuration/backends/verifiable-credentials#verifiable-presentations).
+<p><strong data-param="verifiable_presentations">Add Verifiable presentation</strong> enable the users to present Verifiable Credentials, given their [definition](/docs/provider-configuration/backends/verifiable-credentials#verifiable-presentations).</p>
 
 ### Verifiable Credentials Issuance
 
-__Credential identifier__ the identifier used to identify the credential within the issuance protocols. Would be accessible through `presentation_details` or an OAuth scope. The latter overiding the other.
+<p><strong data-param="credential_identifier">Credential identifier</strong> the identifier used to identify the credential within the issuance protocols. Would be accessible through `presentation_details` or an OAuth scope. The latter overiding the other.</p>
 
-__Verifiable credential type__ would set the `vct` claim in Verifiable Credentials depending their format.
+<p><strong data-param="vct">Verifiable credential type</strong> would set the `vct` claim in Verifiable Credentials depending their format.</p>
 
-__Version__ the OpenID 4 Verifiable Credentials Issuance version used to expose the credential. Would be one of:
-- __Draft 11__
-- __Draft 13__
+<div class="parameter-entry">
+<p><strong data-param="version">Version</strong> the OpenID 4 Verifiable Credentials Issuance version used to expose the credential. Would be one of:</p>
+<ul>
+<li><strong>Draft 11</strong></li>
+<li><strong>Draft 13</strong></li>
+</ul>
+</div>
 
-__Format__ would be the format of the exposed credential.
-- __jwt_vc__ from [W3C Verifiable Credential Data Model 1.0](https://www.w3.org/TR/vc-data-model-1.0)
-- __jwt_vc_json__ from [W3C Verifiable Credential Data Model 1.0](https://www.w3.org/TR/vc-data-model-1.0)
-- __vc+sd-jwt__ from [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-08.html)
+<div class="parameter-entry">
+<p><strong data-param="format">Format</strong> would be the format of the exposed credential.</p>
+<ul>
+<li>__jwt_vc__ from <a href="https://www.w3.org/TR/vc-data-model-1.0">W3C Verifiable Credential Data Model 1.0</a></li>
+<li><strong>jwt_vc_json</strong> from <a href="https://www.w3.org/TR/vc-data-model-1.0">W3C Verifiable Credential Data Model 1.0</a></li>
+<li><strong>vc+sd-jwt</strong> from <a href="https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-08.html">SD-JWT-based Verifiable Credentials</a></li>
+</ul>
+</div>
 
-__Defered__ define whenever the credential issuance is deffered or not.
+<p><strong data-param="defered">Defered</strong> define whenever the credential issuance is deffered or not.</p>
 
-__Types (separated with a whitespace)__ the types used to identify the credential within the issuance protocols.
+<p><strong data-param="types">Types (separated with a whitespace)</strong> the types used to identify the credential within the issuance protocols.</p>
 
-__Time to live (in seconds)__ the time to live of the overall credential, defining its expiration.
+<p><strong data-param="time_to_live">Time to live (in seconds)</strong> the time to live of the overall credential, defining its expiration.</p>
 
-__Add claim__ would add a claim containing identity information to the credential.
+<p><strong data-param="claims">Add claim</strong> would add a claim containing identity information to the credential.</p>
 
-__Scope restriction__ to access the verifiable credential, a list of scopes can be requested. The access token used to obtain the credential must be granted those scopes.
+<p><strong data-param="scopes">Scope restriction</strong> to access the verifiable credential, a list of scopes can be requested. The access token used to obtain the credential must be granted those scopes.</p>
 
 #### Claims
 
-__Type__ the type of the current node in the claim tree.
-- __attribute__ would be a standard attribute
-- __object__ would be an object giving the ability to have children claims
-- __array__ would be an array containing different claims
+<div class="parameter-entry">
+<p><strong data-param="type">Type</strong> the type of the current node in the claim tree.</p>
+<ul>
+<li><strong>attribute</strong> would be a standard attribute</li>
+<li><strong>object</strong> would be an object giving the ability to have children claims</li>
+<li><strong>array</strong> would be an array containing different claims</li>
+</ul>
+</div>
 
-__Name__ would be the name of the claim giving the `key` of the attribute.
+<p><strong data-param="name">Name</strong> would be the name of the claim giving the `key` of the attribute.</p>
 
-__Label__ would be a friendly labeling of the claim, stated in the `display` of exposed supported credentials.
+<p><strong data-param="label">Label</strong> would be a friendly labeling of the claim, stated in the `display` of exposed supported credentials.</p>
 
-__Pointer__ would give the way to access the claim `value` within the current resource owner claims.
+<p><strong data-param="pointer">Pointer</strong> would give the way to access the claim `value` within the current resource owner claims.</p>
 
 #### Display
 
-__Name__ would be the display name of the credential.
+<p><strong data-param="display.name">Name</strong> would be the display name of the credential.</p>
 
-__Background color__ would give the background color of the displayed credential card.
+<p><strong data-param="display.background_color">Background color</strong> would give the background color of the displayed credential card.</p>
 
-__Text color__ would give the text color of the displayed credential card.
+<p><strong data-param="display.text_color">Text color</strong> would give the text color of the displayed credential card.</p>
 
-__Logo URL__ would give the logo URL of the displayed credential card.
+<p><strong data-param="display.logo.url">Logo URL</strong> would give the logo URL of the displayed credential card.</p>
 
-__Logo alt text__ would give the logo alternative text of the displayed credential card.
+<p><strong data-param="display.logo.alt_text">Logo alt text</strong> would give the logo alternative text of the displayed credential card.</p>
 
 ### Verifiable Presentations
 
-__Presentation identifier__ the identifier of the presentation that would be requested while asking to request a credential presentation.
+<p><strong data-param="presentation_identifier">Presentation identifier</strong> the identifier of the presentation that would be requested while asking to request a credential presentation.</p>
 
-__Presentation definition__ the given definition of the requested presentation to be validated.
+<p><strong data-param="presentation_definition">Presentation definition</strong> the given definition of the requested presentation to be validated.</p>
 
 </div>
 

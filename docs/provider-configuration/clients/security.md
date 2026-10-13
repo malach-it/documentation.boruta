@@ -26,37 +26,37 @@ The type of the generated key pairs is tied to the signature algorithm used for 
 
 <div class="parameters">
 
-__Signatures adapter__ defines the adapter used to generate and use the client's cryptographic keys. The internal and Universal signatures adapters are available by default.
+<p><strong data-param="signatures_adapter">Signatures adapter</strong> defines the adapter used to generate and use the client's cryptographic keys. The internal and Universal signatures adapters are available by default.</p>
 
-__Key type__ defines the type and parameters of the key pair generated for the client. RSA keys require a modulus and exponent size, elliptic curve keys require a curve, and Universal keys use the Universal signatures adapter.
+<p><strong data-param="key_pair_type">Key type</strong> defines the type and parameters of the key pair generated for the client. RSA keys require a modulus and exponent size, elliptic curve keys require a curve, and Universal keys use the Universal signatures adapter.</p>
 
-__ID token signature algorithm__ is the algorithm used to sign ID Token JWTs. It have to be in correspondance with the key pair type.
+<p><strong data-param="id_token_signature_alg">ID token signature algorithm</strong> is the algorithm used to sign ID Token JWTs. It have to be in correspondance with the key pair type.</p>
 
-__Userinfo response signature algorithm__ is the algorithm used to sign userinfo response JWTs, the response being possibily not encoded and signed. It have to be in correspondance with the key pair type.
+<p><strong data-param="userinfo_signed_response_alg">Userinfo response signature algorithm</strong> is the algorithm used to sign userinfo response JWTs, the response being possibily not encoded and signed. It have to be in correspondance with the key pair type.</p>
 
 ### Authorization
 
-__Enforce Demonstration Proof-of-Possession (DPoP)__ enables the client to only support [DPoP](https://datatracker.ietf.org/doc/html/rfc9449) requests.
+<p><strong data-param="enforce_dpop">Enforce Demonstration Proof-of-Possession (DPoP)</strong> enables the client to only support [DPoP](https://datatracker.ietf.org/doc/html/rfc9449) requests.</p>
 
-__Enforce pre-authorized code transaction code__ enforces the presentation of a `tx_code` while issuing verifiable credentials.
+<p><strong data-param="enforce_tx_code">Enforce pre-authorized code transaction code</strong> enforces the presentation of a `tx_code` while issuing verifiable credentials.</p>
 
-__Authorize scope__ would determine if the client defines the specific public and private scopes to be authorized.
+<p><strong data-param="authorize_scope">Authorize scope</strong> would determine if the client defines the specific public and private scopes to be authorized.</p>
 
-__Authorized scopes__ would be the list of scopes that can be granted with this client.
+<p><strong data-param="authorized_scopes">Authorized scopes</strong> would be the list of scopes that can be granted with this client.</p>
 
-__Check public client id__ enforces the check of the presentation `vp_token` against the `client_id` parameter in OpenID 4 Verifiable Presentations flows.
+<p><strong data-param="check_public_client_id">Check public client id</strong> enforces the check of the presentation `vp_token` against the `client_id` parameter in OpenID 4 Verifiable Presentations flows.</p>
 
-__Trusted hosts__ defines the hosts from which the client is allowed to retrieve remote resources such as a JSON Web Key Set.
+<p><strong data-param="trusted_hosts">Trusted hosts</strong> defines the hosts from which the client is allowed to retrieve remote resources such as a JSON Web Key Set.</p>
 
-__Trusted authorities__ defines the trusted decentralized identifiers authorized as authorities for the client.
+<p><strong data-param="trusted_authorities">Trusted authorities</strong> defines the trusted decentralized identifiers authorized as authorities for the client.</p>
 
 ### Proof Key for Code Exchange
 
-__PKCE__ would determine if [Proof Key for Code Exchange](https://datatracker.ietf.org/doc/html/rfc7636) flow is enforced using this client.
+<p><strong data-param="pkce">PKCE</strong> would determine if [Proof Key for Code Exchange](https://datatracker.ietf.org/doc/html/rfc7636) flow is enforced using this client.</p>
 
-__Public refresh token__ allow refreshing tokens without providing a `client_secret`
+<p><strong data-param="public_refresh_token">Public refresh token</strong> allow refreshing tokens without providing a `client_secret`</p>
 
-__Public revoke__ allow to revoke tokens without providing a `client_secret`
+<p><strong data-param="public_revoke">Public revoke</strong> allow to revoke tokens without providing a `client_secret`</p>
 
 </div>
 

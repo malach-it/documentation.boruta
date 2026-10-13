@@ -19,27 +19,27 @@ Backends parameters help to __manage identity storage and associated features__ 
 
 ### SMTP configuration
 
-__From__ is the `from` email header field, corresponding to the sender email.
+<p><strong data-param="smtp_from">From</strong> is the `from` email header field, corresponding to the sender email.</p>
 
-__Relay__ is the SMTP server hostname which will be relaying the emails.
+<p><strong data-param="smtp_relay">Relay</strong> is the SMTP server hostname which will be relaying the emails.</p>
 
-__Username__ the `username` part of the credentials used to connect to the SMTP server.
+<p><strong data-param="smtp_username">Username</strong> the `username` part of the credentials used to connect to the SMTP server.</p>
 
-__Password__ the `password` part of the credentials used to connect to the SMTP server.
+<p><strong data-param="smtp_password">Password</strong> the `password` part of the credentials used to connect to the SMTP server.</p>
 
-__SSL__ determine if the connection to the SMTP server is to be encrypted using SSL.
+<p><strong data-param="smtp_ssl">SSL</strong> determine if the connection to the SMTP server is to be encrypted using SSL.</p>
 
-__TLS__ can be one of __Always__, __Never__, __If available__, determine if the emails are to be encrypted using TLS.
+<p><strong data-param="smtp_tls">TLS</strong> can be one of __Always__, __Never__, __If available__, determine if the emails are to be encrypted using TLS.</p>
 
-__Port__ is the SMTP server port to be used.
+<p><strong data-param="smtp_port">Port</strong> is the SMTP server port to be used.</p>
 
 ### Email templates
 
-__Edit confirmation template__ is the template used while sending email confirmation emails.
+<p><strong data-param="confirmation_instructions">Edit confirmation template</strong> is the template used while sending email confirmation emails.</p>
 
-__Edit reset password template__ is the template used while sending reset password emails.
+<p><strong data-param="reset_password_instructions">Edit reset password template</strong> is the template used while sending reset password emails.</p>
 
-__Edit transaction code template__ is the template used while sending OpenID 4 Verifiable Credentials issuance `tx_code` emails.
+<p><strong data-param="tx_code">Edit transaction code template</strong> is the template used while sending OpenID 4 Verifiable Credentials issuance `tx_code` emails.</p>
 
 </div>
 

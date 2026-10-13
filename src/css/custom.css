@@ -228,7 +228,8 @@ iframe {
   margin-top: 1.66em
 }
 
-.parameters>p {
+.parameters > p,
+.parameters > .parameter-entry {
   position: relative;
   border-top: 1px solid var(--ifm-color-gray-300);
   border-left: 1px solid var(--ifm-color-gray-300);
@@ -237,8 +238,17 @@ iframe {
   margin-top: 2em;
 }
 
-.parameters>p:after {
-  content: 'parameter';
+.parameters > .parameter-entry > p {
+  margin-bottom: 0.5em;
+}
+
+.parameters > .parameter-entry > ul {
+  padding-left: 2em;
+}
+
+.parameters > p > strong[data-param]::before,
+.parameters > .parameter-entry > p > strong[data-param]::before {
+  content: attr(data-param);
   position: absolute;
   top: -1.3em;
   left: -1em;
@@ -246,9 +256,12 @@ iframe {
   background: var(--ifm-color-gray-100);
   color: var(--ifm-color-gray-600);
   border: 1px solid var(--ifm-color-gray-300);
+  font-size: 0.91em;
+  font-weight: normal;
 }
 
-[data-theme='dark'] .parameters>p:after {
+[data-theme='dark'] .parameters > p > strong[data-param]::before,
+[data-theme='dark'] .parameters > .parameter-entry > p > strong[data-param]::before {
   background: var(--ifm-color-gray-900);
   color: var(--ifm-color-gray-100);
   border: 1px solid var(--ifm-color-gray-300);

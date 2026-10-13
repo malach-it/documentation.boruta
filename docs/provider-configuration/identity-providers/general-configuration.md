@@ -15,16 +15,24 @@ Identity providers parameters help to __manage end-user means of authentication_
 
 <div class="parameters">
 
-__Name__ help to recognize the configured identity provider within the administration interface.
+<p><strong data-param="name">Name</strong> help to recognize the configured identity provider within the administration interface.</p>
 
-__Backend__ set the associated backend providing the end-user credentials, configurations and attributes.
+<p><strong data-param="backend_id">Backend</strong> set the associated backend providing the end-user credentials, configurations and attributes.</p>
 
-__Sessions__ help to configure the log in temaplates and features giving means for the user to be identified giving its username.
-- __check password__ switches the password requirement for authentication. Whenn disabled, the server creates a one time login associated to the username.
+<div class="parameter-entry">
+<p><strong data-param="check_password">Sessions</strong> help to configure the log in temaplates and features giving means for the user to be identified giving its username.</p>
+<ul>
+<li><strong>check password</strong> switches the password requirement for authentication. Whenn disabled, the server creates a one time login associated to the username.</li>
+</ul>
+</div>
 
-__Global templates__ allow to edit templates that can't be desactivated:
-- __Send password instructions__ is the template that help to send a [recover password email](/docs/provider-configuration/backends/email-configuration) giving the end-user username
-- __Reset password__ help for the end-user to edit his password after following the recovery link that has been sent through an email
+<div class="parameter-entry">
+<p><strong data-param="templates">Global templates</strong> allow to edit templates that can't be desactivated:</p>
+<ul>
+<li><strong>Send password instructions</strong> is the template that help to send a <a href="/docs/provider-configuration/backends/email-configuration">recover password email</a> giving the end-user username</li>
+<li><strong>Reset password</strong> help for the end-user to edit his password after following the recovery link that has been sent through an email</li>
+</ul>
+</div>
 
 </div>
 

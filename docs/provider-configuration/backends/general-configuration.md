@@ -17,13 +17,13 @@ Backends parameters help to __manage identity storage and associated features__ 
 
 <div class="parameters">
 
-__Name__ help to recognize the configured backend within the administration interface.
+<p><strong data-param="name">Name</strong> help to recognize the configured backend within the administration interface.</p>
 
-__Default__ define the backend which will be used in case of resource owner password credentials requests.
+<p><strong data-param="is_default">Default</strong> define the backend which will be used in case of resource owner password credentials requests.</p>
 
-__Create default organization__ backend newly created users will have a default organization along with them.
+<p><strong data-param="create_default_organization">Create default organization</strong> backend newly created users will have a default organization along with them.</p>
 
-__Roles__ are the roles assigned at runtime to all configured backend users.
+<p><strong data-param="roles">Roles</strong> are the roles assigned at runtime to all configured backend users.</p>
 
 </div>
 

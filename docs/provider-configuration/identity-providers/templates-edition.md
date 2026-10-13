@@ -14,49 +14,49 @@ Identity provider templates are to be seen by the end-user, they are __editable 
 
 <div class="parameters">
 
-__federated_servers.{federated server name}.login_url__ gives the login URL in case of identity federation helping to implement "login with" button. That variable is associated with the [configuration of a federated server](/docs/provider-configuration/backends/identity-federation).
+<p><strong data-param="federated_servers.{name}.login_url">federated_servers.&#123;federated server name&#125;.login_url</strong> gives the login URL in case of identity federation helping to implement "login with" button. That variable is associated with the [configuration of a federated server](/docs/provider-configuration/backends/identity-federation).</p>
 
-__messages__ gives the server messages array having for each of them `type` and `content` attributes.
+<p><strong data-param="messages">messages</strong> gives the server messages array having for each of them `type` and `content` attributes.</p>
 
-__\_csrf_token__ gives the anti request forgery token that is to be sent along with each end-user form.
+<p><strong data-param="_csrf_token">_csrf_token</strong> gives the anti request forgery token that is to be sent along with each end-user form.</p>
 
-__errors__ gives the current errors array having for each of them a `message` attribute.
+<p><strong data-param="errors">errors</strong> gives the current errors array having for each of them a `message` attribute.</p>
 
-__client__ gives the current client associated to the request, it has all the corresponding client attributes.
+<p><strong data-param="client">client</strong> gives the current client associated to the request, it has all the corresponding client attributes.</p>
 
 #### The server URL that the end-user can navigate to
 
-__delete_user_session_path__ accessible through `DELETE`
+<p><strong data-param="delete_user_session_path">delete_user_session_path</strong> accessible through `DELETE`</p>
 
-__edit_user_path__ accessible through `GET`
+<p><strong data-param="edit_user_path">edit_user_path</strong> accessible through `GET`</p>
 
-__destroy_user_path__ accessible through `POST`
+<p><strong data-param="destroy_user_path">destroy_user_path</strong> accessible through `POST`</p>
 
-__new_user_totp_registration_path__ accessible through `GET`
+<p><strong data-param="new_user_totp_registration_path">new_user_totp_registration_path</strong> accessible through `GET`</p>
 
-__create_user_totp_registration_path__ accessible through `POST`
+<p><strong data-param="create_user_totp_registration_path">create_user_totp_registration_path</strong> accessible through `POST`</p>
 
-__new_user_webauthn_registration_path__ accessible through `GET`
+<p><strong data-param="new_user_webauthn_registration_path">new_user_webauthn_registration_path</strong> accessible through `GET`</p>
 
-__create_user_webauthn_registration_path__ accessible through `POST`
+<p><strong data-param="create_user_webauthn_registration_path">create_user_webauthn_registration_path</strong> accessible through `POST`</p>
 
-__new_user_registration_path__ accessible through `GET`
+<p><strong data-param="new_user_registration_path">new_user_registration_path</strong> accessible through `GET`</p>
 
-__new_user_reset_password_path__ accessible through `GET`
+<p><strong data-param="new_user_reset_password_path">new_user_reset_password_path</strong> accessible through `GET`</p>
 
-__new_user_session_path__ accessible through `GET`
+<p><strong data-param="new_user_session_path">new_user_session_path</strong> accessible through `GET`</p>
 
-__update_user_reset_password_path__ accessible through `POST`
+<p><strong data-param="update_user_reset_password_path">update_user_reset_password_path</strong> accessible through `POST`</p>
 
-__update_user_path__ accessible through `POST`
+<p><strong data-param="update_user_path">update_user_path</strong> accessible through `POST`</p>
 
 #### Identity provider configurations
 
-__registrable?__ equals to `true` if the identity provider user registration feature is enabled.
+<p><strong data-param="registrable?">registrable?</strong> equals to `true` if the identity provider user registration feature is enabled.</p>
 
-__totpable?__ equals to `true` if the identity provider Time base One Time Password feature is enabled.
+<p><strong data-param="totpable?">totpable?</strong> equals to `true` if the identity provider Time base One Time Password feature is enabled.</p>
 
-__user_editable?__ equals to `true` if the identity provider user edition feature is enabled.
+<p><strong data-param="user_editable?">user_editable?</strong> equals to `true` if the identity provider user edition feature is enabled.</p>
 
 </div>
 
@@ -64,21 +64,21 @@ __user_editable?__ equals to `true` if the identity provider user edition featur
 
 <div class="parameters">
 
-__current_user__ the current user object navigating on the interface. The `username`, `webauthn_registered_at`, `totp_registered_at` and `metadata` attributes are exposed.
+<p><strong data-param="current_user">current_user</strong> the current user object navigating on the interface. The `username`, `webauthn_registered_at`, `totp_registered_at` and `metadata` attributes are exposed.</p>
 
-__client__ the current oauth client the user is navigating to. The `name` attribute is exposed.
+<p><strong data-param="client">client</strong> the current oauth client the user is navigating to. The `name` attribute is exposed.</p>
 
-__scopes__ the list of requested scopes objects. The `name`, `label` and `public` attributes are exposed.
+<p><strong data-param="scopes">scopes</strong> the list of requested scopes objects. The `name`, `label` and `public` attributes are exposed.</p>
 
-__webauthn_options__ the webauthn option to be given to given to the browser API. The `rp`, `user`, `challenge`, `credential_id` and `publicKeyCredParams` attributes are exposed.
+<p><strong data-param="webauthn_options">webauthn_options</strong> the webauthn option to be given to given to the browser API. The `rp`, `user`, `challenge`, `credential_id` and `publicKeyCredParams` attributes are exposed.</p>
 
-__base64_credential_offer_qr_code__ the base64 encoded credential offer QR code image.
+<p><strong data-param="base64_credential_offer_qr_code">base64_credential_offer_qr_code</strong> the base64 encoded credential offer QR code image.</p>
 
-__credential_offer_deeplink__ the credential offer deeplink text.
+<p><strong data-param="credential_offer_deeplink">credential_offer_deeplink</strong> the credential offer deeplink text.</p>
 
-__base64_presentation_qr_code__ the base64 encoded verifiable presentation QR code image.
+<p><strong data-param="base64_presentation_qr_code">base64_presentation_qr_code</strong> the base64 encoded verifiable presentation QR code image.</p>
 
-__presentation_deeplink__ the verifiable presentation deeplink text.
+<p><strong data-param="presentation_deeplink">presentation_deeplink</strong> the verifiable presentation deeplink text.</p>
 
-__code__ the credential offer or verifiable presentation code used to trigger presentation server sent events.
+<p><strong data-param="code">code</strong> the credential offer or verifiable presentation code used to trigger presentation server sent events.</p>
 </div>

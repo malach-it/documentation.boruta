@@ -17,7 +17,7 @@ Backends parameters help to __manage identity storage and associated features__ 
 
 <div class="parameters">
 
-__Add federated server__ adds a federated server configuration to the current backend, helping to enable identity federation, using remote authentication methods, with it which can be materialized by a ["login with" button](/docs/provider-configuration/configure-identity-providers#global-templates-variables).
+<p><strong data-param="federated_servers">Add federated server</strong> adds a federated server configuration to the current backend, helping to enable identity federation, using remote authentication methods, with it which can be materialized by a ["login with" button](/docs/provider-configuration/configure-identity-providers#global-templates-variables).</p>
 
 :::note federated server configuration
 
@@ -27,21 +27,25 @@ You'll need to fill the `redirect_uri` on the federated server client configurat
 
 ### Federated server
 
-__Server name__ help to recognize the configured remote authentication server within the administration interface.
+<p><strong data-param="name">Server name</strong> help to recognize the configured remote authentication server within the administration interface.</p>
 
-__Client ID__ is the configured `client_id` on the remote authentication server OAuth client configuration.
+<p><strong data-param="client_id">Client ID</strong> is the configured `client_id` on the remote authentication server OAuth client configuration.</p>
 
-__Client secret__ is the configured `client_secret` on the remote authentication server OAuth client configuration.
+<p><strong data-param="client_secret">Client secret</strong> is the configured `client_secret` on the remote authentication server OAuth client configuration.</p>
 
-__Base URL__ is the base URL used for the interactions with the remote authentication server.
+<p><strong data-param="base_url">Base URL</strong> is the base URL used for the interactions with the remote authentication server.</p>
 
-__scope (separated with a whitespace)__ are the scopes that are used in the authorization code grant flow authenticating with the remote server.
+<p><strong data-param="scope">scope (separated with a whitespace)</strong> are the scopes that are used in the authorization code grant flow authenticating with the remote server.</p>
 
-__Add Federated metadata__ metadata endpoint configuration that help to fetch protected resources using the granted access token.
-- __Metadata endpoint URL__ is the URL where to fetch the user metadata
-- __Metadata endpoint claims (separated with a whitespace)__ is the list of the jsonpaths used to retreive user metadata. You can use the token `:all` to select all current node claims.
+<div class="parameter-entry">
+<p><strong data-param="metadata_endpoints">Add Federated metadata</strong> metadata endpoint configuration that help to fetch protected resources using the granted access token.</p>
+<ul>
+<li><strong>Metadata endpoint URL</strong> is the URL where to fetch the user metadata</li>
+<li><strong>Metadata endpoint claims (separated with a whitespace)</strong> is the list of the jsonpaths used to retreive user metadata. You can use the token <code>:all</code> to select all current node claims.</li>
+</ul>
+</div>
 
-__Use OpenID discovery__ define if OpenID discovery is used to fetch server configuration (endpoints)
+<p><strong data-param="discovery_path">Use OpenID discovery</strong> define if OpenID discovery is used to fetch server configuration (endpoints)</p>
 
 :::note paths
 
@@ -50,15 +54,15 @@ All remote authentication server configuration endpoints can be expressed with e
 :::
 ### Discovery endpoints
 
-__Discovery path__ the OpenID discovery path used to fetch server configuration. Configuration is fetched while persisting the backend configuration.
+<p><strong data-param="discovery_path">Discovery path</strong> the OpenID discovery path used to fetch server configuration. Configuration is fetched while persisting the backend configuration.</p>
 
 ### OpenID endpoints
 
-__Userinfo path__ the OpenID Userinfo path used to fetch user information.
+<p><strong data-param="userinfo_path">Userinfo path</strong> the OpenID Userinfo path used to fetch user information.</p>
 
-__Authorize path__ the OAuth 2.0 authorize path used to authenticate the current user.
+<p><strong data-param="authorize_path">Authorize path</strong> the OAuth 2.0 authorize path used to authenticate the current user.</p>
 
-__Token path__ the OAuth 2.0 token path used to fetch an `access_token` given an authorization `code`.
+<p><strong data-param="token_path">Token path</strong> the OAuth 2.0 token path used to fetch an `access_token` given an authorization `code`.</p>
 
 </div>
 

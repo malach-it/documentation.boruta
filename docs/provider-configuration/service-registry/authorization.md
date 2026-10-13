@@ -15,25 +15,25 @@ Authorization parameters help __protect upstream routes__ before traffic reaches
 
 <div class="parameters">
 
-__Authorize__ requires requests to provide a valid OAuth access token before they are forwarded.
+<p><strong data-param="authorize">Authorize</strong> requires requests to provide a valid OAuth access token before they are forwarded.</p>
 
-__Authorization type__ defines authorization protocol, either Basic Auth credentials, or OAuth bearer.
+<p><strong data-param="authorization_type">Authorization type</strong> defines authorization protocol, either Basic Auth credentials, or OAuth bearer.</p>
 
-__Required scopes__ restrict authorized traffic by HTTP method. Keys can be HTTP methods such as `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD`, `OPTIONS`, or `*` for the default rule. Values are the OAuth scopes required for the method.
+<p><strong data-param="required_scopes">Required scopes</strong> restrict authorized traffic by HTTP method. Keys can be HTTP methods such as `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD`, `OPTIONS`, or `*` for the default rule. Values are the OAuth scopes required for the method.</p>
 
-__Error content type__ defines the content type returned for gateway authorization errors.
+<p><strong data-param="error_content_type">Error content type</strong> defines the content type returned for gateway authorization errors.</p>
 
-__Forbidden response__ customizes the response returned when the access token is valid but does not contain the required scopes.
+<p><strong data-param="forbidden_response">Forbidden response</strong> customizes the response returned when the access token is valid but does not contain the required scopes.</p>
 
-__Unauthorized response__ customizes the response returned when the request has no valid access token.
+<p><strong data-param="unauthorized_response">Unauthorized response</strong> customizes the response returned when the request has no valid access token.</p>
 
-__Forwarded token signature algorithm__ enables boruta to send backend request context in the `X-Forwarded-Authorization` header. Supported algorithms are `HS256`, `HS384`, `HS512`, `RS256`, `RS384`, and `RS512`.
+<p><strong data-param="forwarded_token_signature_alg">Forwarded token signature algorithm</strong> enables boruta to send backend request context in the `X-Forwarded-Authorization` header. Supported algorithms are `HS256`, `HS384`, `HS512`, `RS256`, `RS384`, and `RS512`.</p>
 
-__Forwarded token secret__ signs forwarded tokens when using an `HS*` algorithm. Leave it empty to let boruta generate one.
+<p><strong data-param="forwarded_token_secret">Forwarded token secret</strong> signs forwarded tokens when using an `HS*` algorithm. Leave it empty to let boruta generate one.</p>
 
-__Forwarded token private key__ signs forwarded tokens when using an `RS*` algorithm. Leave it empty to let boruta generate a key pair.
+<p><strong data-param="forwarded_token_private_key">Forwarded token private key</strong> signs forwarded tokens when using an `RS*` algorithm. Leave it empty to let boruta generate a key pair.</p>
 
-__Forwarded token public key__ is the public key matching the generated or configured private key.
+<p><strong data-param="forwarded_token_public_key">Forwarded token public key</strong> is the public key matching the generated or configured private key.</p>
 
 </div>
 

@@ -20,11 +20,11 @@ The command line interface authenticates with the administration OAuth client co
 
 <div class="parameters">
 
-__BORUTA_ADMIN_OAUTH_CLIENT_ID__ defines the administration OAuth client used to execute commands.
+<p><strong data-param="BORUTA_ADMIN_OAUTH_CLIENT_ID">BORUTA_ADMIN_OAUTH_CLIENT_ID</strong> defines the administration OAuth client used to execute commands.</p>
 
-__BORUTA_ADMIN_OAUTH_CLIENT_SECRET__ defines the secret used to authenticate the administration OAuth client.
+<p><strong data-param="BORUTA_ADMIN_OAUTH_CLIENT_SECRET">BORUTA_ADMIN_OAUTH_CLIENT_SECRET</strong> defines the secret used to authenticate the administration OAuth client.</p>
 
-__BORUTA_COMMAND_SUB__ defines the subject written to business-event logs for commands. It defaults to the current operating system user and hostname.
+<p><strong data-param="BORUTA_COMMAND_SUB">BORUTA_COMMAND_SUB</strong> defines the subject written to business-event logs for commands. It defaults to the current operating system user and hostname.</p>
 
 </div>
 
@@ -38,11 +38,11 @@ boruta-cli <resource> <action> [resource-id] [response-filter ...] [-- action-pa
 
 <div class="parameters">
 
-__Resource__ identifies an administration resource, such as `client`, `backend`, `identity_provider`, `scope`, `role`, `user`, `organization`, `upstream`, `key_pair`, `token`, or `logs`.
+<p><strong data-param="Resource">Resource</strong> identifies an administration resource, such as `client`, `backend`, `identity_provider`, `scope`, `role`, `user`, `organization`, `upstream`, `key_pair`, `token`, or `logs`.</p>
 
-__Action__ identifies the administration API action to execute. Resource names and actions use snake case, for example `identity_provider` and `regenerate_key_pair`.
+<p><strong data-param="Action">Action</strong> identifies the administration API action to execute. Resource names and actions use snake case, for example `identity_provider` and `regenerate_key_pair`.</p>
 
-__Resource ID__ identifies the resource affected by actions such as `show`, `update`, `delete`, `rotate`, `revoke`, and regeneration actions.
+<p><strong data-param="id">Resource ID</strong> identifies the resource affected by actions such as `show`, `update`, `delete`, `rotate`, `revoke`, and regeneration actions.</p>
 
 __Response filters__ select attributes or nested paths from the YAML response. They are placed before `--`.
 
