@@ -9,7 +9,7 @@ boruta is currently in an __open beta phase__. If you are interested by the proj
 boruta is an authorization server that aims to implement OAuth 2.0 and satelite
 specifications. On top of authorization, it provides identity management, an
 experimental gateway and administration interfaces. Those provide an identity
-and access management solution taht helps to solve identity related problems,
+and access management solution that helps to solve identity related problems,
 up to decentralized identity.
 
 <div class="centered">
