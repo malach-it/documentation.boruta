@@ -1,6 +1,6 @@
 # Service registry configuration | Authorization
 
-Authorization parameters help __protect upstream routes__ before traffic reaches the backend service. They define the access-token requirement, the required OAuth scopes, and the forwarded identity context sent to the upstream.
+Upstreams provide __access management to services__ from routing up to security rules. Here, access control management would help services to have clear, bounded ingress rules while securing the traffic through certificate management both for destination and potentially origin considering internal traffic but also to apply inbound traffic rules restricting the access.
 
 :::note Parameters sections
 [Service registry](/docs/provider-configuration/configure-service-registry) upstreams can be customized through either the [Administration API](/api/list-upstreams), the user interface, or static configuration files. The configuration is organized around:
