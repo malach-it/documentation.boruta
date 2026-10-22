@@ -5,6 +5,6 @@ patatoid:
   image_url: /documentation.boruta/img/logo.png
 
 codex:
-  name: Codex
-  title: AI coding agent by OpenAI
+  name: Written with assistance from Codex
+  title: reviewed and published by Malachit
   url: https://developers.openai.com/codex/
