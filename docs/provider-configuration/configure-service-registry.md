@@ -6,7 +6,7 @@ Note that the gateway is experimental and might not be fully functional for prod
 
 :::
 
-boruta can work __as a cluster__, providing instances of an identity platform to __secure infrastructures__. Each running node publishes a service registry record describing how it can be reached and which gateway services it exposes.
+boruta can work __as a cluster__, providing instances of an identity platform to __secure infrastructures__. Each running node publishes a service registry record describing how it can be reached and which gateway services it exposes. Master __gateway and sidecars__ create an infrastructure within which the traffic can be routed, having different levels of security, departing from HTTP to HTTPS to mTLS for external and internal traffic. Those provide __zero-trust abilities__ where each boruta instance maintain its own certificate to authenticate itself to peer nodes. On top of __traffic management__, boruta provides security rules to inbound traffic like authentication against identity providers credentials or several traffic restriction rules.
 
 ## Service registry
 
@@ -16,6 +16,22 @@ The IP address is selected from the first non-loopback network interface, fallin
 
 The registry is refreshed through database notifications and periodic checks. Every node touches its own record every 5 seconds and tries to reach other registered Erlang nodes. A node that cannot be reached for about 30 seconds is removed from the registry. When a node stops normally, its record is marked `offline`.
 
+## Cluster storage
+
+Gateway upstreams and service registry records are stored in PostgreSQL by default. To store these two gateway tables in Mnesia, set `BORUTA_GATEWAY_BACKEND=mnesia` **before compiling** the server or building a release. The repository adapter is selected at compile time, so changing the variable on an existing release does not switch its storage backend. For an existing build, recompile with the new setting (`mix compile --force`).
+
+Set `BORUTA_GATEWAY_MNESIA_DIR` to an absolute path on persistent storage. On startup, the gateway creates the Mnesia schema and the `upstreams` and `service_registry_records` tables. The default directory is intended for local development. Each Mnesia node needs a stable Erlang node name and its own data directory; a deployment with multiple nodes also needs Mnesia clustering and recovery configured. Build the admin release with the same backend and connect it to the same Mnesia cluster so it can manage gateway data.
+
+```sh
+BORUTA_GATEWAY_BACKEND=mnesia \
+BORUTA_GATEWAY_MNESIA_DIR=/var/lib/boruta/gateway-mnesia \
+mix compile --force
+```
+
+Other Boruta repositories, including `boruta_auth`, still use PostgreSQL. Switching the gateway backend does not copy existing PostgreSQL upstreams or service registry records into Mnesia. Mnesia tables are created from the gateway schemas rather than SQL migrations; if an existing table's attributes do not match the current schema, startup fails until its data is migrated explicitly.
+
+## Upstreams
+
 :::note global entry
 
 The `global` entry displayed in the administration interface is a gateway configuration helper, not a stored service registry record. It is used to manage upstreams that are served by the main gateway entrypoint.
@@ -24,11 +40,11 @@ The `global` entry displayed in the administration interface is a gateway config
 
 ![service registry administration](/assets/images/service-registry-upstreams.png)
 
-## Upstreams
-
 Upstreams define how gateway requests are __forwarded__ to backend services. They are grouped by `node_name`.
 
 `global` upstreams are used by the main gateway. Upstreams attached to a service registry node are used by that node's sidecar gateway. This lets the same administration view configure both central gateway routes and microgateway routes close to registered services.
+
+For example, an orders service can expose `/orders` through a sidecar upstream. With authorization enabled, the gateway can require `orders:read` for `GET` and `orders:write` for `POST` before forwarding those requests.
 
 ## Microgateway / Sidecars
 

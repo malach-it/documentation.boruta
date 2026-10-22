@@ -1,6 +1,6 @@
 # Service registry configuration | URIs
 
-Upstream URIs define the __public path prefixes__ exposed by the gateway. They are used to select the upstream receiving a request and to decide whether the matched prefix is kept or removed before forwarding.
+Upstreams attributes help organizations __manage access to services__ registered behind boruta. Together, they define where requests are routed, which public paths are exposed, how callers are authorized, and how upstream traffic is protected. The gateway applies these configured rules before forwarding requests to backend services.
 
 :::note Parameters sections
 [Service registry](/docs/provider-configuration/configure-service-registry) upstreams can be customized through either the [Administration API](/api/list-upstreams), the user interface, or static configuration files. The configuration is organized around:
