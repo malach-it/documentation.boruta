@@ -145,6 +145,37 @@ Quote the value as `"[]"` when the literal string is required. Explicit action p
 Commands can omit `--` and pass action parameters directly. Indexed paths on read actions are treated as response filters. Using `--` for create and update actions makes the distinction between response filters and action parameters explicit.
 :::
 
+## Provider configuration parameters
+
+For available resource parameters, see the provider configuration pages:
+
+- [Clients](/docs/provider-configuration/configure-clients) explains how OAuth clients are configured and managed.
+  - [General configuration](/docs/provider-configuration/clients/general-configuration) lists the core client settings.
+  - [Authentication](/docs/provider-configuration/clients/authentication) covers client and user authentication settings.
+  - [Security](/docs/provider-configuration/clients/security) covers authorization, cryptographic signatures, and PKCE settings.
+  - [Grant types](/docs/provider-configuration/clients/grant-types) lists the OAuth flows a client can use.
+- [Identity providers](/docs/provider-configuration/configure-identity-providers) explains how end-user authentication interfaces are configured.
+  - [General configuration](/docs/provider-configuration/identity-providers/general-configuration) lists the core identity provider settings.
+  - [Templates edition](/docs/provider-configuration/identity-providers/templates-edition) describes editable authentication templates and their variables.
+  - [Features](/docs/provider-configuration/identity-providers/features) lists optional authentication and user management features.
+- [Backends](/docs/provider-configuration/configure-backends) explains how user registries and identity sources are configured.
+  - [General configuration](/docs/provider-configuration/backends/general-configuration) lists the core backend settings.
+  - [Type](/docs/provider-configuration/backends/type) covers internal and LDAP backend types.
+  - [Email configuration](/docs/provider-configuration/backends/email-configuration) covers SMTP settings and email templates.
+  - [Identity federation](/docs/provider-configuration/backends/identity-federation) covers external identity providers and their endpoints.
+  - [Verifiable credentials](/docs/provider-configuration/backends/verifiable-credentials) covers credential issuance and presentation settings.
+  - [User metadata](/docs/provider-configuration/backends/user-metadata) covers custom user attributes.
+- [Scopes](/docs/provider-configuration/configure-scopes) explains scope names, labels, and visibility.
+  - [Roles](/docs/provider-configuration/scopes/roles) explains how roles group scopes.
+- [Service registry and upstreams](/docs/provider-configuration/configure-service-registry) explains node registration and gateway routing.
+  - [General configuration](/docs/provider-configuration/service-registry/general-configuration) lists the core upstream settings.
+  - [URIs](/docs/provider-configuration/service-registry/uris) covers the paths exposed by an upstream.
+  - [Authorization](/docs/provider-configuration/service-registry/authorization) covers access rules for upstream requests.
+  - [Security](/docs/provider-configuration/service-registry/security) covers upstream protection, rate limiting, and noise cancelling.
+- [Error templates](/docs/provider-configuration/configuration/error-templates) describes the templates used for authentication and authorization errors.
+- [Configuration files](/docs/provider-configuration/configuration-files) describes the YAML structure for static provider configuration.
+- [Environment variables](/docs/provider-configuration/environment-variables) lists runtime settings used by the server and CLI.
+
 ## Query parameters
 
 Parameters for read actions are sent as query parameters. The following command requests business events and filters the output to three attributes:
